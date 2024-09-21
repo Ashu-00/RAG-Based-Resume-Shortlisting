@@ -1,0 +1,12 @@
+PyMuPDF
+faiss-cpu
+numpy
+rank-bm25
+scikit-learn
+sentence-transformers
+gradio
+requests
+pydantic
+python-dotenv
+groq
+fastapi
