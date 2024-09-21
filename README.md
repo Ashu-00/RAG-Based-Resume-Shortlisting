@@ -15,7 +15,7 @@ This project implements a document retrieval system that utilizes a combination 
 
 ## Project Overview
 
-This application is designed to perform efficient document retrieval with hybrid search capabilities, integrating both traditional methods like BM25 and modern deep learning-based embeddings using FAISS. Users can upload documents and perform real-time searches, with results enhanced by a RAG pipeline.
+This application is designed to perform efficient document retrieval with hybrid search capabilities, integrating both traditional methods like BM25 and modern deep learning-based embeddings using FAISS. Users can upload Resumes and perform real-time searches, with results enhanced by a RAG pipeline.
 
 ## Features
 
