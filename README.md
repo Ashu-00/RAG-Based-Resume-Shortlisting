@@ -50,9 +50,9 @@ This application is designed to perform efficient document retrieval with hybrid
 ```
 AC-Assignment/ 
 ├── pycache/ 
-├── docs/ │
- ├── Gautam.pdf │
- └── Revant.pdf 
+├── docs/ 
+  ├── Gautam.pdf 
+  └── Revant.pdf 
 ├── .env 
 ├── chunking.py 
 ├── gradio-app.py 
@@ -83,6 +83,10 @@ AC-Assignment/
 
    ```bash
    uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+   ```
+   OR
+   ```bash
+   python server.py
    ```
 3. Open the Gradio interface by running:
     ` python gradio-app.py `

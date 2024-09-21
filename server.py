@@ -1,6 +1,6 @@
 from chunking import process_pdf_directory,hybrid_search
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 import os
 from dotenv import load_dotenv
 import groq
@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException
 
 class Query(BaseModel):
     text: str
+    top_k: int 
 
 class Response(BaseModel):
     answer: str
@@ -64,7 +65,7 @@ groq_client = groq.Client(api_key=groq_api_key)
 @app.post("/query", response_model=Response)
 async def query_endpoint(query: Query):
     try:
-        answer, sources = rag_pipeline(query.text)
+        answer, sources = rag_pipeline(query.text, query.top_k)
         return Response(answer=answer, sources=sources)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
